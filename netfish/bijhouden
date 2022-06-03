@@ -1,0 +1,184 @@
+<?php include('header.php') ?>
+<?php include('functions.php') ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.header2 {
+			background: #ff0000;
+            
+		}
+		button[name=register_btn] {
+			background: #ff0000;
+		}
+	</style>
+</head>
+<body>
+	<div class="header2">
+		<h2>Admin - Maak gebruiker</h2>
+	</div>
+	
+	<form method="post" action="beheerder.php">
+
+		<?php echo display_error(); ?>
+
+		<div class="input-group">
+			<label>Gebruikersnaam</label>
+			<input type="text" name="username" value="<?php echo $username; ?>">
+		</div>
+		<div class="input-group">
+			<label>Email</label>
+			<input type="email" name="email" value="<?php echo $email; ?>">
+		</div>
+		<div class="input-group">
+			<label>User type</label>
+			<select name="user_type" id="user_type" >
+				<option value=""></option>
+				<option value="admin">Admin</option>
+				<option value="user">User</option>
+			</select>
+		</div>
+		<div class="input-group">
+			<label>Wachtwoord</label>
+			<input type="password" name="password_1">
+		</div>
+		<div class="input-group">
+			<label>Confirm wachtwoord</label>
+			<input type="password" name="password_2">
+		</div>
+		<div class="input-group">
+			<button type="submit" class="btn" name="register_btn"> + Maak user </button>
+		</div>
+	</form>
+</body>
+</html>
+
+
+<?php 
+if (isset($_POST['submit']) && isset($_FILES['my_image']) ) {
+     include "config.php";
+     $img_name = $_FILES['my_image']['name'];
+     $img_size = $_FILES['my_image']['size'];
+     $tmp_name2 = $_FILES['my_image']['tmp_name'];
+     $error = $_FILES['my_image']['error'];
+
+     if ($error === 0) {
+         if ($img_size > 125000) {
+            $em = "Te grote file neef";
+            header("Location: index2.php?error=$em");
+         } else {
+             $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+             $img_ex_lc = strtolower($img_ex);
+
+             $allowed_exs = array("jpg", "jpeg", "png");
+
+             if (in_array($img_ex_lc, $allowed_exs)) {
+                 $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
+                 $img_upload_path = 'foto/'.$new_img_name;
+                 move_uploaded_file($tmp_name, $img_upload_path); 
+                 $sql = "INSERT INTO movie(image) VALUES('$new_img_name')";
+                 mysqli_query($conn, $sql);
+                 header("Location: index.php");
+             
+            
+         } else {
+            $em = "unknown error";
+            header("Location: beheerder.php?error=$em");
+         }
+        }
+
+     }else {
+         $em = "unknown error";
+         header("Location: beheerder.php?error=$em");
+     }
+    }else {
+        header("Location: beheerder.php");
+    } 
+
+if (isset($_POST['submit']) && isset($_FILES['my_video']) ) {
+    include "config.php";
+    $video_name = $_FILES['my_video']['name'];
+    $tmp_name = $_FILES['my_video']['tmp_name'];
+    $error = $_FILES['my_video']['error'];
+
+    if ($error === 0) {
+        $video_ex = pathinfo($video_name, PATHINFO_EXTENSION);
+
+        $video_ex_lc = strtolower($video_ex);
+
+        $allowed_exs = array("mp4", 'webm', 'avi', 'flv');
+
+        if (in_array($video_ex_lc, $allowed_exs)) {
+            
+            $new_video_name = uniqid("video-", true). '.'.$video_ex_lc;
+            $video_upload_path = 'video/'.$new_video_name;
+            move_uploaded_file($tmp_name, $video_upload_path);
+
+            $sql ="INSERT INTO movie(url) VALUES ('$new_video_name ')";
+            mysqli_query($conn, $sql);
+            header("Location: view.php");
+
+        }else {
+            $em = "Je kan niet uploaden met deze type file.";
+            header("Location: beheerder.php?error=");
+        }
+
+    }
+
+}else{
+   header("Location: beheerder.php");
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>video upload php and mysql</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+		input {
+			font-size: 2rem;
+		}
+		a {
+			text-decoration: none;
+			color: #006CFF;
+			font-size: 1.5rem;
+		}
+	</style>
+</head>
+<body>
+	<a href="view.php">Videos</a>
+	<?php if (isset($_GET['error'])) {  ?>
+		<p><?=$_GET['error']?></p>
+	<?php } ?>
+	 <form action="upload.php"
+	       method="post"
+	       enctype="multipart/form-data">
+
+        <p>Video</p>
+	 	<input type="file" name="my_video">
+
+		<p>Photo</p>
+		<input type="file" name="image">
+		<textarea name="text" cols="40" rows="4" placeholder="Zeg iets over de Film"></textarea>
+		<br>
+		<br>
+	 	<input type="submit"
+	 	       name="submit" 
+	 	       value="Upload">
+	 </form>
+</body>
+</html>

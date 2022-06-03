@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: ;
+}
+
+body {
+    background-color: black;
+}
+
+
+
+header{
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    overflow: hidden;
+    left: 55%;
+    top: 3%;
+    
+    
+}
+header ul{
+    list-style-type: none;
+}
+header ul li{
+    display: inline;
+    padding: 3.5%;
+    
+}
+header ul li a{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 30%;
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border-radius: 8px;
+    
+   
+}
+
+
+header ul li a:hover{
+    text-decoration: underline;
+    
+}
+
+
+.logo {
+    height: 50%;
+    width: 50%;
+}
+
+/*  Begin Styling Inloggen */ 
+.header2 {
+	width: 40%;
+	margin: 50px auto 0px;
+	color: white;
+	background: #ff0000;
+	text-align: center;
+	border: 1px solid #B0C4DE;
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+}
+form, .content {
+	width: 40%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #B0C4DE;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+}
+.input-group {
+	margin: 10px 0px 10px 0px;
+}
+.input-group label {
+	display: block;
+	text-align: left;
+	margin: 3px;
+}
+.input-group input {
+	height: 30px;
+	width: 93%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+#user_type {
+	height: 40px;
+	width: 98%;
+	padding: 5px 10px;
+	background: white;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+.btn {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #ff0000;
+	border: none;
+	border-radius: 5px;
+}
+
+.content {
+	position: relative;
+	height: 100%;
+	width: 10%; 
+	margin-left: 1%;
+}
+.header3 {
+	width: 10%;
+	margin-top: 10%;
+	margin-left: 1%;
+	color: white;
+	background: #ff0000;
+	text-align: center;
+	border: 1px solid #000000;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+}
+.error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+.success {
+	color: #ff0000; 
+	background: #000000; 
+	border: 1px solid #fefffe;
+	margin-bottom: 20px;
+}
+.profile_info img {
+	display: inline-block; 
+	width: 50px; 
+	height: 50px; 
+	margin: 5px;
+	float: left;
+}
+.profile_info div {
+	position: relative;
+	display: inline-block; 
+	margin: 5px;
+}
+.profile_info:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*  Einde Styling Inloggen */ 
+
+/*Beheer Pagina begin */
+
+/* View.php */
+
+
+.alb {
+	position: relative;
+	margin-left: 15%;
+	border: 4px solid white; 
+	width: 70%;
+}
