@@ -1,2 +1,0 @@
-# School
-Voorbeeld repo, les 
