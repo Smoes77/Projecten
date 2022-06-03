@@ -1,0 +1,401 @@
+    <div id="pizza1">
+       <img src="sopranos3.jpg" alt="PizzaFoto" style="width: 200px; height: 150px;">
+    </div>
+
+
+    
+    <div id="pizza2">
+        <img src="sopranos1.jpeg" alt="PizzaFoto2" style="width: 200px; height: 150px;">
+    </div>
+
+    <div id="pizza3">
+        <img src="sopranos4.jpg" alt="PizzaFoto3" style="width: 200px; height: 150px;">
+    </div>
+
+    <div id="pizza4">
+        <img src="sopranos2.jpg" alt="PizzaFoto4" style="width: 200px; height: 150px;"> 
+    </div>
+
+
+
+      .dropbtn2 {
+    background-color: rgb(0, 73, 12);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    right: 600px;
+    border: 1px solid black;
+
+  }
+  
+  .dropbtn2:hover, .dropbtn2:focus {
+    background-color: rgb(0, 73, 12);
+    right: 600px;
+    
+  }
+  
+  .dropdown2 {
+    position: relative;
+    display: inline-block;
+    left: 75%;
+    top: 95px;
+    
+  }
+  
+  .dropdown2-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  
+  .dropdown2-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown2 a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+  function myFunction() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn2')) {
+      var dropdowns = document.getElementsByClassName("dropdown2-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=sopranos", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+
+$sql = 'SELECT * FROM pizza';
+
+$stmt = $conn->query($sql);
+$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+var_dump($data);
+
+
+
+
+?>
+
+.gifdata {
+    position: absolute;
+    left: 650px;
+    bottom: 175px;
+}
+
+<div class="gifdata"> 
+   <img src="qucee.gif" style="width: 600px; height:400px;"> 
+</div>
+
+   
+
+
+        <div id="pizza1">
+       <img src="sopranos3.jpg" alt="PizzaFoto" style="width: 200px; height: 150px;">
+    </div>
+
+    <div class="dropdown">
+  <button class="dropbtn">Pizza Margherita: Grootte:</button>
+  <div class="dropdown-content">
+    <a href="winkelwagen.php">Medium (25 cm):</a>
+    <a href="winkelwagen.php">Large (35 cm): <br> + €1,00</a>
+    <a href="winkelwagen.php">Calzone (Opgevouwen Pizza):  + €1,00</a>
+  </div>
+</div>
+
+    <div id="pizza2">
+        <img src="sopranos1.jpeg" alt="PizzaFoto2" style="width: 200px; height: 150px;">
+    </div>
+
+    <div class="dropdown2">
+  <button class="dropbtn2">Pizza Salami Grootte:</button>
+  <div class="dropdown2-content">
+    <a href="winkelwagen.php">Medium (25 cm):</a>
+    <a href="winkelwagen.php">Large (35 cm): <br> + €1,00</a>
+    <a href="winkelwagen.php">Calzone (Opgevouwen Pizza):  + €1,00</a>
+  </div>
+</div>
+
+    <div id="pizza3">
+        <img src="sopranos4.jpg" alt="PizzaFoto3" style="width: 200px; height: 150px;">
+    </div>
+
+    <div class="dropdown3">
+  <button class="dropbtn3">Pizza Shoarma Grootte:</button>
+  <div class="dropdown3-content">
+    <a href="winkelwagen.php">Medium (25 cm): </a>
+    <a href="winkelwagen.php">Large (35 cm): <br> + €1,00</a>
+    <a href="winkelwagen.php">Calzone (Opgevouwen Pizza):  + €1,00</a>
+  </div>
+</div>
+
+
+
+
+    <div class="dropdown4">
+  <button class="dropbtn4">Pizza Veggie Grootte: </button>
+  <div class="dropdown4-content">
+    <a href="winkelwagen.php">Medium (25 cm): </a>
+    <a href="winkelwagen.php">Large (35 cm): <br> + €1,00</a>
+    <a href="winkelwagen.php">Calzone (Opgevouwen Pizza): + €1,00</a>
+  </div>
+</div>
+
+<div id="pizza4">
+        <img src="sopranos2.jpg" alt="PizzaFoto4" style="width: 200px; height: 150px;"> 
+    </div>
+
+
+
+
+    //<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"> 
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="bestellen.php">Bestellen</a></li>
+                <li><a href="winkelwagen.php">Winkelwagen</a></li>
+                <li><a href="data.php">Admin</a></li>
+           </ul>
+        </div>
+    </div>
+    <div class="prijskaartje">
+        <h1>Prijskaartje</h1>
+      <div class=" tekstm"> 
+        <p1> Pizza Margherita: €5,00  </p1>
+</div>
+<div class=" teksts"> 
+        <p1> Pizza Salami: €6,00  </p1>
+</div>
+<div class=" tekstsh"> 
+        <p1> Pizza Shoarma: €7,00  </p1>
+</div>
+<div class=" tekstv"> 
+        <p1> Pizza Veggie: €9,00  </p1>
+</div>
+</div>
+<?php 
+<form action="bestellen2.php" method="post">
+<div class="betalingswijze">
+            <select name="betalingswijze" value="true">
+            <option value="Medium">Medium</option>
+            <option value="Large">Large + €1,00</option>
+            <option value="Calzone">Calzone + €1,00 </option>
+        </select>
+        </div>
+</form>
+<form action="bestellen2.php" method="post">
+<div class="betalingswijze2">
+            <select name="betalingswijze2" value="true">
+            <option value="Medium">Medium</option>
+            <option value="Large">Large + €1,00</option>
+            <option value="Calzone">Calzone + €1,00 </option>
+        </select>
+        </div>
+</form>
+<form action="bestellen2.php" method="post">
+<div class="betalingswijze3">
+            <select name="betalingswijze3" value="true">
+
+            <option value="Medium">Medium</option>
+            <option value="Large">Large + €1,00</option>
+            <option value="Calzone">Calzone + €1,00 </option>
+        </select>
+        </div>
+</form>
+<form action="bestellen2.php" method="post">
+<div class="betalingswijze4">
+            <select name="betalingswijze4" value="true">
+            <option value="Medium">Medium</option>
+            <option value="Large">Large + €1,00</option>
+            <option value="Calzone">Calzone + €1,00 </option>
+        </select>
+        </div>
+</form>
+
+<div class="rollendepizza">
+  <img src="sopranos.jpg" style="width: 500px; height: 500px;">
+</div>
+
+<div id="pizza1">
+       <img src="sopranos3.jpg" alt="PizzaFoto" style="width: 200px; height: 150px;">
+    </div>
+
+    <div class="dropdown">
+  <button class="dropbtn">Pizza Margherita: Grootte:</button>
+  <div class="dropdown-content">
+
+  </div>
+</div>
+
+
+    <div id="pizza2">
+        <img src="sopranos1.jpeg" alt="PizzaFoto2" style="width: 200px; height: 150px;">
+    </div>
+
+    <div class="dropdown2">
+  <button class="dropbtn2">Pizza Salami Grootte:</button>
+  <div class="dropdown2-content">
+ 
+  </div>
+</div>
+
+    <div id="pizza3">
+        <img src="sopranos4.jpg" alt="PizzaFoto3" style="width: 200px; height: 150px;">
+    </div>
+
+    <div class="dropdown3">
+  <button class="dropbtn3">Pizza Shoarma Grootte:</button>
+  <div class="dropdown3-content">
+
+  </div>
+</div>
+
+
+
+
+    <div class="dropdown4">
+  <button class="dropbtn4">Pizza Veggie Grootte: </button>
+  <div class="dropdown4-content">
+
+  </div>
+</div>
+
+<div id="pizza4">
+        <img src="sopranos2.jpg" alt="PizzaFoto4" style="width: 200px; height: 150px;"> 
+    </div>
+
+
+
+?>
+
+        
+     
+
+    <div class="footer"> 
+   
+    </div>
+ 
+    
+</body>
+</html>
+
+
+
+<div id="gifdata2">
+  <img src="ziasblou.gif" style="width: 500px; height:300px;">
+</div>
+<div class="gifdata"> 
+ <img src="qucee.gif" style="width: 500px; height:300px;"> 
+</div>
+
+<div id="gifdata3">
+  <img src="flight.gif" style="width: 500px; height:300px;">
+</div>
+
+.gifdata {
+  border: 3px solid rgb(0, 0, 0);
+  position: absolute;
+  left: 700px;
+  bottom: 70px;
+}
+
+#gifdata2 {
+  border: 3px solid red;
+  position: absolute;
+  bottom: 70px;
+  left: 10px;
+}
+
+#gifdata3 {
+  border: 3px solid green;
+  position: absolute;
+  bottom: 70px;
+  left: 1410px;
+}
+
+.database {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100px;
+}
+
+
+<div class="backgroundinfo">    
+  <img src="waiting.gif" style="width: 100%; height: 880px;" >
+  </div>
+  
+
+  <div id="formuno">
+    <form  action="information.php"  method="get">
+      <label for="fname">Volledige Naam:</label>
+      <input type="text" id="fname" name="naam" placeholder="Je naam..">
+  
+      <label for="lname">Telefoonnummer</label>
+      <input type="text" id="lname" name="telefoonnummer" placeholder="Je telefoonnummer..">
+  
+      <label for="lname">E-mail</label>
+      <input type="text" id="lname" name="e-mail" placeholder="Je e-mail..">
+  
+  
+      <label for="country">Stad</label>
+      <select id="country" name="country">
+        <option value="Utrecht">Utrecht</option>
+        <option value="Woerden">Woerden</option>
+        <option value="Oudewater">Oudewater</option>
+      </select>
+  
+      <label for="lname">Postcode</label>
+      <input type="text" id="lname" name="postcode" placeholder="Je adress..">
+  
+      <label for="lname">Adress</label>
+      <input type="text" id="lname" name="adres" placeholder="Je adress..">
+  
+     
+  
+      
+  
+      <input type="submit" value="Verstuur">
+    </form>
