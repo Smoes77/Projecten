@@ -1,0 +1,349 @@
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
+  .boven {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 1600px;
+  }
+  .boven header {
+    position: relative;
+    background: #68bce4;
+    width: 1600px;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-shadow: 1px 5px 5px black;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  
+  
+.boven header #vlag {
+    left: 87.5%;
+    width: 1400px;
+    height: 80px;
+  }
+
+  .boven header #vlag {
+    position: relative;
+    width: 200px;
+    height: 80px;
+  }
+
+  .boven header #vlag img {
+    height: 100%;
+    width: 200px;
+  }
+
+  .boven nav {
+    background: #ffffff;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: auto;
+    width: 570px;
+  }
+  .boven nav ul {
+    list-style-type: none;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+  }
+
+  .boven nav ul div a {
+    text-decoration: none;
+    color: rgb(0, 75, 136);
+    text-align: justify;
+   
+  } 
+  .boven main {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1600px;
+    height: 600px;
+    border: solid rgb(0, 0, 0) 1px;
+    background-image: url(HPIM2700.JPG);
+    background-size: cover;
+  }
+
+  .boven main article {
+    height: 570px;
+    width: 560px;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    margin: auto;
+    background: #ffffff;
+    border: solid black 1px;
+    position: relative;
+  }
+
+
+  
+.boven main #videoContainer {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    right: 150px;
+    border: solid black 1px;
+  }
+
+  .boven main #videoContainer video {
+    height: 182px;
+    width: 300px;
+  }
+
+select {
+  width: 100%;
+}  
+
+#achtergrond1 {
+  position: relative;
+  height: 100%;
+  width: 300px;
+  background-size: cover;
+}
+.boven footer {
+    background: #ffffff;
+    margin-top: 10px;
+    width: 1600px;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    display: -ms-grid;
+    display: flex;
+    -ms-grid-columns: 2.5fr 2.5fr 1fr;
+    grid-template-columns: 2.5fr 2.5fr 1fr;
+    font-size: 20px;
+    text-align: center;
+    border: solid black 1px;
+    float: left;
+    margin-bottom: 3%;
+    margin-top: 1%;
+
+
+  }
+
+  #logo {
+    position: absolute;
+    font-size: 15px;
+    right: 600px;
+  }
+
+  #footer1 {
+    background-color: #66b8df;
+    height: 100%;
+    width: 33.3%;
+    box-shadow: 2px 2px 4px rgb(53, 52, 52);
+    border: 1px solid  black;
+  }
+
+  #adress2 {
+    height: 100%;
+    width: 43.3%;
+    border: solid 1px black;
+    
+  }
+
+  #credits {
+    margin: auto;
+    height: 100%;
+    width: 23.3%;
+    border: 1px solid black;
+  }
+
+#nieuws1 {
+  position: relative;
+  width: 560px;
+  height: 35%;
+  color: black;
+  border: 1px solid black;
+  
+}
+
+#nieuws2 {
+  position: relative;
+  width: 560px;
+  height: 30%;
+  border: 1px solid black;
+  
+
+}
+#nieuws3 {
+  position: relative;
+  border: 1px solid black;
+  width: 560px;
+  height: 34%;
+  font-size: 20px;
+
+}
+
+
+
+
+#doneren1 {
+  position: relative;
+  height: 33.3%;
+  width: 560px;
+  border: 1px solid black;
+
+}
+#foto1doneren {
+  position: relative;
+  height: 100%;
+  left: 350px;
+  top: 5%;
+}
+#doneren2 {
+  position: relative;
+  width: 560px;
+  height: 34%;
+  border: 1px solid black;
+
+}
+#doneren3 {
+  position: relative;
+  border: 1px solid black;
+  width: 560px;
+  height: 32%;
+
+}
+
+#foto2doneren {
+  position: relative;
+  height: 100%;
+  left: 430px;
+  top: 2%;
+}
+#button {
+  position: relative;
+  height: 100%;
+  left: 490px;
+  top: -7%;
+}
+.next {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  
+}
+
+#button2 {
+  position: relative;
+  height: 100%;
+  top: 93.4%;
+  left: 490px;
+
+}
+.next2 {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+#button3 {
+  position: relative;
+  height: 100%;
+  top: -7%;
+  left: 450px;
+
+ 
+}
+.next3 {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid black;
+}
+
+main article form {
+  height: 95%;
+  position: relative;
+  margin: 0 20px;
+
+}
+
+
+ main article form fieldset {
+  height: 100%;
+  padding: 0;
+  
+
+}
+
+
+
+main article form fieldset textarea {
+  margin-top: 50px;
+  width: 99%;
+  height: 200px;
+  
+
+}
+
+#button4 {
+  position: relative;
+  height: 100%;
+  top: -7%;
+  left: 450px;
+
+}
+
+.next4 {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.dropbtn {
+  background-color: #ffffff;
+  color: rgb(10, 18, 54);
+  padding: 16px;
+  font-size: 12px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ffffff;}
