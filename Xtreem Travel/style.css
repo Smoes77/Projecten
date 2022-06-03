@@ -1,0 +1,330 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+} 
+
+
+
+/* Navbar */
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(184, 47%, 77%);
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 110%;
+    right: 50%;
+   left: 20%;
+    
+    
+
+
+
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 30px 0px;
+    
+}
+.navbar ul li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    
+    
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 8px 25px;
+    transition: all .5s ease;
+   
+    
+
+}
+.navbar ul li a:hover{
+    background-color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgb(0, 0, 0);
+    
+}
+
+.main {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+}
+.second {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+/*Foto 1 */
+
+.foto1 {
+    position: relative;
+    width: 20%;
+    left: 4.3%;
+    top: 150px;
+  } 
+  .windfoto1 {
+    opacity: 1;
+    display: block;
+    height: auto;
+    height: 300px;
+    width: 450px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .midden {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .foto1:hover .windfoto1 {
+    opacity: 0.3;
+  }
+  .foto1:hover .midden {
+    opacity: 1;
+  }
+  .middentext {
+    background-color: #0026ff;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+.foto1:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+#tekst1 {
+    position: absolute;
+    font-size: 15px;
+    bottom: 240px;
+    left: 80px;
+}
+
+/*Foto 2 */
+
+.foto2 {
+    position: relative;
+    width: 20%;
+    left: 38.5%;
+    bottom: 150px;
+  } 
+.windfoto2 {
+    opacity: 1;
+    display: block;
+    height: auto;
+    height: 300px;
+    width: 450px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .midden2 {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .foto2:hover .windfoto2 {
+    opacity: 0.3;
+  }
+  .foto2:hover .midden2 {
+    opacity: 1;
+  }
+  .middentext2 {
+    background-color: #0026ff;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+.foto2:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+#tekst2 {
+    position: absolute;
+    font-size: 15px;
+    bottom: 240px;
+    left: 750px;
+}
+
+
+/* Foto 3 */
+
+.foto3 {
+    position: relative;
+    width: 20%;
+    left: 73.5%;
+    bottom: 450px;
+  } 
+.windfoto3 {
+    opacity: 1;
+    display: block;
+    height: auto;
+    height: 300px;
+    width: 450px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .midden3 {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .foto3:hover .windfoto3 {
+    opacity: 0.3;
+  }
+  .foto3:hover .midden3 {
+    opacity: 1;
+  }
+  .middentext3 {
+    background-color: #0026ff;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+.foto3:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+#foto3:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+#tekst3 {
+    position: absolute;
+    font-size: 15px;
+    bottom: 225px;
+    left: 1400px;
+}
+@keyframes revolutie {
+    from {
+        transform: rotate(0deg);
+
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.surfingfoto1 {
+    position: absolute;
+    left: 50px;
+    bottom: 250px;
+    animation-name: revolutie;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+    
+}
+
+
+#surfingtekst1 {
+    position: absolute;
+    left: 700px;
+    font-size: 30px;
+    top: 33%;
+}
+
+.mountainfoto1 {
+    position: absolute;
+    left: 60px;
+    bottom: 250px;
+    animation-name: revolutie;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.mountainfoto3 {
+    position: absolute;
+    left: 1460px;
+    bottom: 250px;
+    animation-name: revolutie;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+#mountaintekst1 {
+    position: absolute;
+    left: 550px;
+    font-size: 25px;
+    top: 35%;
+  
+}
+
+
+.snorkelfoto1 {
+    position: absolute;
+    left: 1225px;
+    bottom: 250px;
+    animation-name: revolutie;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+   
+   
+ 
+}
+#snorkeltekst1 {
+    position: absolute;
+    left: 60px;
+    font-size: 30px;
+    top: 31%;
+}
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+ 
+
+ 
+  
+
